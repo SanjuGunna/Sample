@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+   - name: Replace a line
+     lineinfile: 
+       dest: /Users/chennavarri/sanju/playbooks/textin.txt
+       regexp: 'Heya!'
+       line: 'Hello'

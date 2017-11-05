@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: Install mongodb 
+      curl_get:
+         src=https://fastdl.mongodb.org/osx-ssl/mongodb-osx-ssl-x86_64-3.4.10.tgz dest=/Users/chennavarri/sanju/playbooks/ansible/
+          

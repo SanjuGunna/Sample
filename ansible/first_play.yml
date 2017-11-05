@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks: 
+    - name: Create file
+      file:
+          path: /Users/chennavarri/sanju/playbooks/ansible/exmp
+          state: touch
+- hosts: all
+  sudo: no
+  tasks:
+    - name: Create User
+      user:
+         name: mario
+         shell: /bin/zsh
+    - name: Install zlib
+      yum:
+         name: zlib
+         state: latest

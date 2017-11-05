@@ -1,0 +1,4 @@
+- name: Download Packer
+  get_url: >
+  url=https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.0.15.tgz dest=~/sanju
+  

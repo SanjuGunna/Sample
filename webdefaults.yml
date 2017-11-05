@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install Apache Web Server
+    yum: pkg=Apache state=installed update_cache=true
+  - name: Querying for Telnet Install
+    yum: pkg=telnet state=present update_cache=true
+

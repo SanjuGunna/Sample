@@ -1,0 +1,5 @@
+--- # downloading mongodb
+- hosts: all
+  roles:
+   - { role: "testrole" }
+

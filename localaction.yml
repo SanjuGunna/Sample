@@ -1,0 +1,5 @@
+--- # Master Playbook demonstrating the delegate to command
+- hosts: localhost
+  tasks:
+  - name: Install Telnet Client
+    Homebrew: pkg=telnet state=latest

@@ -1,0 +1,9 @@
+--- #ERROR HANDLING EXAMPLE
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Execute a command that will fail
+      command: /bin/false
+      ignore_errors: yes
+    - name: Install Telnet
+      yum: pkg=telnet state=latest

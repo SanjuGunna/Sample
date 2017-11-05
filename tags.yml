@@ -1,0 +1,16 @@
+--- # TAG FUNCTIONALITY EXAMPLE
+- hosts: localhost
+  sudo: yes
+  gather_facts: no
+  tasks:
+    - name: Install telnet and lynx package
+      yum: pkg={{ item }} state=latest
+      with_items:
+        - telnet
+        - lynx
+      tags:
+        - packages
+    - name: Verify telnet was installed
+      raw: yum list installed | grep telnet > /Users/chennavarri/sanju/playbooks/pkg.log
+      tags:
+        - verification

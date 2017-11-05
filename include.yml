@@ -1,0 +1,8 @@
+--- # FULL INCLUDE TASKS EXAMPLE
+- hosts: localhost
+  sudo: yes
+  gather_facts: no
+  tasks:
+    - include: packages.yml
+    - name: Verify telnet package is installed
+      raw: yum list installed | grep telnet > /Users/chennavarri/sanju/playbooks/pkgs.log

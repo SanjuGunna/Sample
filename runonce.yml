@@ -1,0 +1,12 @@
+--- # RunOnce Playbook example
+- hosts: localhost
+  sudo: no
+  gather_facts: no
+  tasks:
+  - name: cat /runonce.yml
+    raw: /Users/chennavarri/sanju/playbooks >> /Users/chennavarri/sanju/playbooks/ansible.log
+    run_once: yes
+  - name: List the var directory and log it
+    raw: ls -al /var >> /Users/chennavarri/sanju/playbooks/dir.list
+    run_once: true
+

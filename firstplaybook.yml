@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars:
+    playbook_version: 0.1b
+  vars_prompt:
+    - name: web_domain
+      prompt: Web Domain
+  tasks:
+    - name: Install Apache Web Server
+      action: Homebrew name=httpd state=installed
+
+

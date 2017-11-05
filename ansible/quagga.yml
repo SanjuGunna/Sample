@@ -1,0 +1,14 @@
+---
+- hosts: all
+  vars:
+    description: "this is a sanju switch"
+  tasks: 
+  - name: write the quagga config file
+    template: src=quagga.j2 dest=/Users/chennavarri/sanju/playbooks/ansible/quagga.conf
+    notify:
+    - restart quagga
+  - name: ensur quagga is running
+    service: name=quagga state=started
+  handlers: 
+    - name: restart quagga
+      service: name=quagga state=restarted 
